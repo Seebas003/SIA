@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: url('https://www.bloomberglinea.com/resizer/v2/RAEW7WILHFA3JJHMQAYOWKN4EM.jpeg?auth=2d9996b6e3bd09f86ba0666285d6c9a921996fb4e8ae4470773335616e80f35e&width=800&height=533&quality=80&smart=true') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      backdrop-filter: blur(4px);
+    }
+
+    .login-container {
+      background: rgba(31, 31, 31, 0.8);
+      backdrop-filter: blur(12px);
+      border: 2px solid rgba(0, 255, 174, 0.4);
+      border-radius: 15px;
+      padding: 40px 30px;
+      box-shadow: 0 8px 20px rgba(0, 255, 174, 0.2);
+      width: 350px;
+      animation: fadeInUp 1s ease-out;
+      position: relative;
+      text-align: center;
+    }
+
+    .robot {
+      width: 100px;
+      margin: 0 auto 20px;
+      transition: transform 0.3s;
+    }
+
+    .robot img {
+      width: 100%;
+    }
+
+    .input-group {
+      position: relative;
+      margin-bottom: 20px;
+      text-align: left;
+    }
+
+    .input-group label {
+      display: block;
+      font-size: 14px;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    .input-group input {
+      width: 100%;
+      padding: 12px 40px 12px 12px;
+      border-radius: 8px;
+      border: 1px solid transparent;
+      background-color: #ffffff;
+      color: #000;
+      font-size: 14px;
+      transition: border 0.3s, box-shadow 0.3s;
+    }
+
+    .input-group input:focus {
+      outline: none;
+      box-shadow: 0 0 8px #00ffae;
+      border: 1px solid #00ffae;
+    }
+
+    .toggle-password {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      cursor: pointer;
+      color: #000;
+    }
+
+    .login-btn {
+      width: 100%;
+      background-color: #00ffae;
+      color: #000;
+      border: none;
+      padding: 12px;
+      border-radius: 8px;
+      font-weight: bold;
+      font-size: 15px;
+      cursor: pointer;
+      box-shadow: 0 0 10px #00ffae;
+      transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+    }
+
+    .login-btn:hover {
+      background-color: #00d996;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px #00ffae;
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="login-container">
+    <div class="robot">
+      <img id="robotImg" src="https://i.pinimg.com/originals/4b/cb/1f/4bcb1fb72d1d08efa44efa5ceb712ec7.gif" alt="Robot" />
+    </div>
+    <h2>Iniciar Sesión</h2>
+      <div class="input-group">
+        <label for="usuario">Usuario</label>
+        <input id="usuario" type="text" placeholder="Usuario" required />
+      </div>
+      <div class="input-group">
+        <label for="password">Contraseña</label>
+        <input id="password" type="password" placeholder="Contraseña" required />
+        <i class="fas fa-eye toggle-password" id="togglePassword"></i>
+      </div>
+      <div>
+      <nav>
+        <ul>
+        <a href="dashboard.html"><button type="submit" class="login-btn">Entrar</button></a>
+        </ul>
+      </nav>
+      </div>
+    <h3>o</h3>
+    <nav>
+        <ul>
+        <a href="form.html"><button type="submit" class="login-btn">Registrarse</button></a>
+        </ul>
+      </nav>
+  </div>
+</body>
+</html>
